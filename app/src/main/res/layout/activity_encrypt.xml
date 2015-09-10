@@ -1,0 +1,188 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/img_background"
+    >
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.example.swsahu.myapplication.encrypt">
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/container1"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/container2"
+                >
+                <TextView android:text="Input : "
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="99dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/lblInput"
+                    />
+                <CheckBox
+                    android:id="@+id/cbFake"
+                    android:text="(fake)"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_width="99dp"
+                    android:layout_height="45dp"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="@color/button_material_light"
+                    android:layout_below="@id/lblInput"/>
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/real_input"
+                    android:layout_toRightOf="@+id/lblInput"
+                    android:enabled="true"
+                    android:textColor="#FFFFFF"
+                    />
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/FakeInput"
+                    android:layout_toRightOf="@+id/lblInput"
+                    android:textColor="#FFFFFF"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:text="Key : "
+                android:layout_marginLeft="5dp"
+                android:layout_width="99dp"
+                android:layout_height="45dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#FFFFFF"
+                android:id="@+id/lblKey"
+                android:layout_below="@+id/container2"/>
+
+
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Key"
+                android:layout_below="@+id/container2"
+                android:layout_toRightOf="@+id/lblKey"
+                android:textColor="#FFFFFF"
+                />
+            <TextView
+                android:text="     "
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:id="@+id/lblBlank1"
+                android:layout_below="@+id/Key"/>
+
+            <Button
+                android:layout_width="154dp"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_encrypt"
+                android:layout_below="@+id/lblBlank1"
+                android:layout_centerHorizontal="true"
+                android:textAllCaps="false"
+                android:id="@+id/btnEncrypt"
+                />
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/img_gear_red"
+                android:layout_below="@+id/lblBlank1"
+                android:layout_toLeftOf="@id/btnEncrypt"
+                android:id="@+id/imgGear1"
+                android:visibility="invisible"
+                />
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/img_gear_red"
+                android:layout_below="@+id/lblBlank1"
+                android:layout_toRightOf="@id/btnEncrypt"
+                android:id="@+id/imgGear2"
+                android:visibility="invisible"
+                />
+            <TextView
+                android:text="     "
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:id="@+id/lblBlank2"
+                android:layout_below="@+id/btnEncrypt"/>
+
+            <TextView
+                android:text="Output : "
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#FFFFFF"
+                android:id="@+id/lblOutput"
+                android:layout_below="@+id/lblBlank2"/>
+
+
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Output"
+                android:layout_below="@+id/lblBlank2"
+                android:layout_toRightOf="@+id/lblOutput"
+                android:editable="false"
+                android:textColor="#FFFFFF"
+                />
+
+            <TextView
+                android:text="     "
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:id="@+id/lblBlank3"
+                android:layout_below="@+id/Output"/>
+
+            <Button
+                android:layout_width="154dp"
+                android:layout_height="50dp"
+                android:text="Copy Output"
+                android:textColor="#FFFFFFFF"
+                android:background="@drawable/button_background"
+                android:layout_below="@+id/lblBlank3"
+                android:layout_centerHorizontal="true"
+                android:textAllCaps="false"
+                android:id="@+id/btnCopy"
+                />
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+</ScrollView>
